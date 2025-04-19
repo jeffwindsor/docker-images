@@ -24,7 +24,8 @@ zsh
 # lazygit from github
 RUN curl -LO "https://github.com/jesseduffield/lazygit/releases/download/v0.49.0/lazygit_0.49.0_Linux_x86_64.tar.gz" \
 && tar -xf lazygit_0.49.0_Linux_x86_64.tar.gz \
-&& install lazygit -D -t /usr/local/bin/
+&& install lazygit -D -t /usr/local/bin/ \
+&& rm -rf lazygit*
 
 # # starship from github
 RUN curl -sS https://starship.rs/install.sh | sh -s -- -y
